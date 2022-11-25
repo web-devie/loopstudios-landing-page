@@ -1,0 +1,259 @@
+/*************************
+ ------Header Section ----
+ *************************/
+.header {
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 94vh;
+}
+
+.header-container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 6.4rem 12.8rem;
+
+  display: flex; /* For space up b/w nav and h1 */
+  flex-direction: column;
+  gap: 16.8rem;
+}
+.navigation-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-list,
+.footer-list {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.header-link,
+.footer-link {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.header-link::after,
+.footer-link::after {
+  content: "";
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: transparent;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 100ms;
+}
+.header-link:hover::after,
+.footer-link:hover::after {
+  background-color: var(--white);
+}
+.title-div {
+  width: 60rem;
+  border: 2px solid var(--white);
+  padding: 3.2rem;
+}
+.heading--primary {
+  color: var(--white);
+  font-size: 6.4rem;
+}
+
+.btn--mobile {
+  border: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+/**************************
+ -- Interactive Section --
+ *************************/
+.interactive--section {
+  padding: 12.8rem 0 6rem;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 6.4rem 12.8rem;
+  position: relative;
+}
+.img-box {
+  grid-row: 1;
+  grid-column: 1/3;
+}
+.text-box {
+  background-color: var(--white);
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.6rem;
+  align-self: center;
+  grid-row: 1;
+  grid-column: 2/-1;
+  margin: 15rem 0 0 15rem;
+}
+.heading--secondary {
+  font-size: 4.2rem;
+}
+.description {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--dark-gray);
+}
+
+/**************************
+ -- Creation Section --
+ *************************/
+.heading--tertiary {
+  font-size: 3.5rem;
+}
+.container-title {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0rem 12.8rem;
+  position: relative;
+}
+.image-box {
+  position: relative;
+  /* height: 45rem; */
+  cursor: pointer;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.image-box::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background: linear-gradient(180deg, transparent 50%, #000b);
+}
+.image-box:hover::after {
+  background: linear-gradient(180deg, #fffa 50%, #000b);
+}
+.image-box .img-title {
+  font-family: var(--font-JS);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  line-height: 1;
+  position: absolute;
+  bottom: 3.5rem;
+  left: 4rem;
+  color: var(--white);
+  z-index: 1;
+}
+
+.btn--cta {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.6rem 3.5rem;
+  background-color: transparent;
+  border: 1px solid var(--black);
+  transition: all 0.3s;
+  text-decoration: none;
+  color: var(--black);
+  font-family: var(--font-alata);
+
+  position: absolute;
+  top: -36.5px;
+  right: 125px;
+
+  /* right: 17rem;
+  top: 5rem; */
+}
+
+.btn--cta:hover,
+.btn--cta:active {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/**************************
+ ----- Footer Section -----
+ *************************/
+.footer {
+  margin-top: 10rem;
+  background-color: var(--black);
+  padding: 5rem 10rem 1rem;
+  display: flex;
+}
+.logo-div {
+  width: 18rem;
+}
+.logo-div img {
+  width: 100%;
+}
+.logo-and-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+.socials-and-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 0.5rem;
+  margin-left: auto;
+}
+.socials {
+  display: flex;
+  gap: 1.4rem;
+  position: relative;
+}
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon::after {
+  content: "";
+  width: 2rem;
+  height: 0.15rem;
+  background-color: var(--white) transparent;
+  position: absolute;
+  bottom: -5px;
+  transition: all 0.2s ease-in-out;
+}
+.icon:hover::after {
+  background-color: var(--white);
+}
+
+.icon--fb {
+  background-image: url(../images/icon-facebook.svg);
+}
+
+.icon--twitter {
+  background-image: url(../images/icon-twitter.svg);
+}
+.icon--pinterest {
+  background-image: url(../images/icon-pinterest.svg);
+}
+.icon--instagram {
+  background-image: url(../images/icon-instagram.svg);
+}
+.nav-and-cp {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright {
+  color: var(--dark-gray-plus);
+  font-size: 1.6rem;
+}
